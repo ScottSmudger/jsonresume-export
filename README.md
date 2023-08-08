@@ -21,7 +21,6 @@ This can be combined with other actions to publish your resume as a Github page.
 > In addition, this assumes you have set up your GitHub pages on this repository [to reference the `docs/` folder as your source](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#choosing-a-publishing-source).
 
 ```yaml
-# example GitHub workflow
 
 name: Publish resume in JSONResume format as Github Page
  
@@ -41,7 +40,7 @@ jobs:
     needs: check_run
     steps:
       - uses: actions/checkout@v2
-      - uses: scottsmudger/jsonresume-export@v1
+      - uses: scottsmudger/jsonresume-export@v1.0
         name: Export resume as HTML
         with:
           theme: macchiato
